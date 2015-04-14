@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Slideshow for Desktop, Images for </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .cycle-slideshow {
+           /* display: none ;*/
+        }
+        .hidden {
+            display: none;
+        }
+        .cycle-pager {
+            }
+        .cycle-pager span { 
+            font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+            display: inline-block; color: #ddd; cursor: pointer; 
+        }
+        .cycle-pager span.cycle-pager-active { color: #D69746;}
+        .cycle-pager > * { cursor: pointer;}
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-lg-6">
+                <h1>Responsive Slideshow with Static Images Beyond Breaking Point</h1>
+                <p>A responsive slideshow with Jquery's cycle2 plugin and bootstrap that falls back to displaying static images on resize beneath breaking point.</p>
+                <p>Dependencies:
+                    <ul>
+                        <li>JQuery</li>
+                        <li>Bootstrap 3</li>
+                        <li>Cycle 2</li>
+                    </ul>
+                </p>
+                <p>Notes:<br>Cycle is triggered programatically.</p>
+                <p>There seems to be a weird bug in cycle 2 that requires in some instances to first trigger 'destroy' before initalizing. </p>
+                <p>slideshow gets visible after content loaded.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="cycle-slideshow hidden">
+                <div class="col-xs-6 col-sm-12">
+                    <img class="img-responsive" src="http://malsup.github.io/images/p1.jpg">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Curabitur dapibus imperdiet mauris. Nunc blandit nisi mauris, eu commodo risus tincidunt sed. </p>
+                </div>
+                <div class="col-xs-6 col-sm-12">
+                    <img class="img-responsive" src="http://malsup.github.io/images/p2.jpg">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Curabitur dapibus imperdiet mauris. Nunc blandit nisi mauris, eu commodo risus tincidunt sed. </p>
+                </div>
+                <div class="col-xs-6 col-sm-12">
+                    <img class="img-responsive" src="http://malsup.github.io/images/p3.jpg">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Curabitur dapibus imperdiet mauris. Nunc blandit nisi mauris, eu commodo risus tincidunt sed. </p>
+                </div>
+                <div class="col-xs-6 col-sm-12">
+                    <img class="img-responsive"src="http://malsup.github.io/images/p4.jpg">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Curabitur dapibus imperdiet mauris. Nunc blandit nisi mauris, eu commodo risus tincidunt sed. </p>
+                </div>    
+            </div>
+            <div class="cycle-pager col-xs-12"></div>
+        </div>
+    </div>
+
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+    <script src="./js/slideshow.js"></script>
+
+
+
+</body>
+</html>
